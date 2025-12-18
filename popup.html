@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>URL to PDF</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 14px;
+      width: 400px;
+      min-height: 300px;
+      /* border-radius: 10px; */
+    }
+    button, input {
+      width: 100%;
+      padding: 8px;
+      font-size: 18px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      border-radius: 4px;
+    }
+    .note {
+      font-size: 12px;
+      color: #444;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <input id="urlInput" placeholder="(optional) enter URL" />
+  <input id="filenameInput" placeholder="(optional) filename (no .pdf)" />
+  <button id="pdfBtn">Open Print (Save as PDF)</button>
+  <div id="status" style="margin-top: 10px; font-size: 13px; color: #b00020; display: none;"></div>
+  <div id="notes" style="font-family: 'JetBrains Mono', 'Fira Code', monospace; color: #3f2e6e; margin-top: 12px; font-size: 13px; line-height: 1.35;">
+    <div>1) If you want to generate a PDF of the current page, leave the URL blank and enter the filename you want for the PDF file.</div>
+    <div style="margin-top:6px;">2) Pages behind a login or that require authentication may not be saved.</div>
+    <div style="margin-top:10px; color:#b00020; font-weight:600;">Note: Only web pages (http/https URLs) can be saved as PDF. Browser internal pages (New Tab, chrome://, edge://) are not supported.</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
